@@ -31,7 +31,7 @@ Landingpage("a", "b")
 Landingpage("a", "b", true)
 
 // Function with arrow format
-const getVal = (s: string): string {
+const getVal = (s: string): string =>{
     return "value"
 }
 
