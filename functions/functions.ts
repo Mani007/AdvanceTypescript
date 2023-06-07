@@ -30,6 +30,14 @@ function Landingpage(name: string, pass: string, isAdmin: boolean = false){
 Landingpage("a", "b")
 Landingpage("a", "b", true)
 
+// Function with arrow format
+const getVal = (s: string): string {
+    return "value"
+}
 
-
+// Function returing void
+function errormsg(ermsg: string): void{
+    console.log(ermsg)
+    // return 1    This is not possible as function is retuning void
+}
 export {}
