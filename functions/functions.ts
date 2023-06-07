@@ -40,4 +40,9 @@ function errormsg(ermsg: string): void{
     console.log(ermsg)
     // return 1    This is not possible as function is retuning void
 }
+
+// Handle error 
+function errorHandle(ermsg: string): never{
+    throw new Error(ermsg)
+}
 export {}
