@@ -5,6 +5,11 @@ function addTwo(num){
 
 addTwo("5") 
 AddTwo(5)
+
+// Defining the type of return type from the function
+function addTwobad(num: number): number{
+    return num+2
+}
 // Typescript way of declaring function
 function AddTwo(num: number){
     return num+2
