@@ -42,4 +42,16 @@ type NewUser = {
 
 let myUser = {_id: "123",name: 'abc', isPaid: true}
 myUser.name = "jj"
-//myUser._id = 10  this is not possile as its readonly
+//myUser._id = 10  this is not possile as its readonly 
+
+// Type extention
+type creditcard = {
+    cardnum: number
+}
+type creditcarddate = {
+    date: number
+}
+
+type cvv = creditcard & creditcarddate & {
+    cvv: number
+}
