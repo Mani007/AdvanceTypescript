@@ -15,3 +15,8 @@ function checkUser() {
 // weirdness of javascript in typescript
 var newUser = { name: 'abc', isPaid: true, email: 'a@a.a' }; // we are passing extra parameter in object
 createUser(newUser); // no typechecking error is een shown
+// Function accepting user type and returning user type
+function UserCreate(user) {
+    return { name: 'abc', isPaid: true };
+}
+UserCreate({ name: 'abc', isPaid: true });

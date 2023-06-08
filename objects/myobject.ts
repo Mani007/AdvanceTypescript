@@ -20,3 +20,14 @@ function checkUser():{name: string, isPaid: boolean}{
 // weirdness of javascript in typescript
 let newUser = {name: 'abc', isPaid: true, email: 'a@a.a'}  // we are passing extra parameter in object
 createUser(newUser)   // no typechecking error is een shown
+// Type Alias
+type User = {
+    name: string,
+    isPaid: boolean
+}
+// Function accepting user type and returning user type
+function UserCreate(user: User): User{
+    return {name: 'abc', isPaid: true}
+}
+
+UserCreate({name: 'abc', isPaid: true})
