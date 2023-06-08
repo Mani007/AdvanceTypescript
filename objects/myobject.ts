@@ -36,7 +36,8 @@ UserCreate({name: 'abc', isPaid: true})
 type NewUser = {
     readonly _id: string,
     name: string,
-    isPaid: boolean
+    isPaid: boolean,
+    creditCard?: number  // this will make it optional
 }
 
 let myUser = {_id: "123",name: 'abc', isPaid: true}
