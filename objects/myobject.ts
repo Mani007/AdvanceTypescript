@@ -31,3 +31,14 @@ function UserCreate(user: User): User{
 }
 
 UserCreate({name: 'abc', isPaid: true})
+
+// Readonly type 
+type NewUser = {
+    readonly _id: string,
+    name: string,
+    isPaid: boolean
+}
+
+let myUser = {_id: "123",name: 'abc', isPaid: true}
+myUser.name = "jj"
+//myUser._id = 10  this is not possile as its readonly
