@@ -12,5 +12,7 @@ type User = {
 }
 
 const myusers: User[] = []   // array of user object
+// Multidimention array is same as c/c++
+// Also we have read only array
 
 
