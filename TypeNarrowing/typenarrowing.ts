@@ -40,3 +40,12 @@ function printAll(strs: string | string[] | null) {
    
     return animal.fly();
   }
+  // insctanceof narrowing
+// typeof ceck for default type but instance of check for custom object
+  function logValue(x: Date | string) {
+    if (x instanceof Date) {
+      console.log(x.toUTCString());
+    } else {
+      console.log(x.toUpperCase());
+    }
+  }
