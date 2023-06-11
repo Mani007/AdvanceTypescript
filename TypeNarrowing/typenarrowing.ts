@@ -65,3 +65,49 @@ function printAll(strs: string | string[] | null) {
         return "Bird Food"
     }
   }
+
+  // Discriminated union
+  interface Circle{
+    kind: "circle",
+    radius: number
+  }
+  interface Square{
+    kind: "square",
+    side: number
+  }
+
+  interface Rectangle {
+    kind: "rectangle",
+    length: number,
+    width: number
+  }
+
+  //type Shape = Circle| Square
+  function grtShape( shape: Shape) {
+    if (shape.kind === 'circle') {
+        return Math.PI * shape.radius^2
+    }
+    return shape.side * shape.side
+  }
+
+  // Some default in switch case
+
+  interface Triangle {
+    kind: "triangle";
+    sideLength: number;
+  }
+   
+  type Shape = Circle | Square | Triangle;
+   
+  function getArea(shape: Shape) {
+    switch (shape.kind) {
+      case "circle":
+        return Math.PI * shape.radius ** 2;
+      case "square":
+        return shape.side ** 2;
+      default:
+        const _exhaustiveCheck: never = shape;
+  //Type 'Triangle' is not assignable to type 'never'.
+        return _exhaustiveCheck;
+    }
+  }
