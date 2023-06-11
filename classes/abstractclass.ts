@@ -20,4 +20,5 @@ class Instagram extends TakePhoto{
         console.log('abc')
     }
 }
+
 const pic = new Instagram('abc', 'abc', 5)
