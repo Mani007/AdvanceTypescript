@@ -49,3 +49,19 @@ function printAll(strs: string | string[] | null) {
       console.log(x.toUpperCase());
     }
   }
+
+  // Very advance case of type narrowing and type checking
+ //From line 33 and 34
+ function isFish(pet: Fish | Bird): pet is Fish {   // Return type here is pet as fish
+    return (pet as Fish).swim !== undefined;
+  }
+
+  function getFood(pet: Fish|Bird){
+    if (isFish(pet)){
+        pet
+        return "Fish Food"
+    } else {
+        pet
+        return "Bird Food"
+    }
+  }
