@@ -18,3 +18,13 @@ interface Bottle{
 identity<Bottle>({
     brand: 'anc', price: 0
 })
+
+
+function getSearch<T>( prod: T[]):  T {
+    return prod[3]
+}
+
+// In arrow function
+const getmoresearch = <T,>(prod: T[]): T =>{    // the , comma is also OK in this line 'T,'
+    return prod[3]
+}
